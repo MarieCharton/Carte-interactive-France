@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="{{ asset('/css/style.css') }}"/>
+
+		<title>
+			{% block title %}Carte de France
+			{% endblock %}
+		</title>
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+		{% block javascripts %}
+
+		{# Compatibilité Carte avec IE #}
+		<script src="{{ asset('/js/polyfill.js') }}"></script> 
+		
+		{# Script de la carte de France interactive  #}
+		<script src="{{ asset('/js/app.js') }}"></script>
+
+
+		{% endblock %}
+	</body>
+</html>
